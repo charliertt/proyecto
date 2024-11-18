@@ -1,0 +1,26 @@
+<div>
+    <h1 class="Pelis">¿Quienes Somos?</h1>
+    <p>Bienvenidos a nuestra página web que simula una red social de películas, realizada por</p>
+    <ul>
+        <a class="btn btn-primary" href="#" role="button" onclick="mostrarModal('carlos')">Carlos Viveros</a>
+        <a class="btn btn-primary" href="#" role="button" onclick="mostrarModal('ian')">Ian Abadia</a>
+        <a class="btn btn-primary" href="#" role="button" onclick="mostrarModal('ana')">Ana Valencia</a>
+        <a class="btn btn-primary" href="#" role="button" onclick="mostrarModal('alejandro')">Alejandro Diaz</a>
+        <a class="btn btn-primary" href="#" role="button" onclick="mostrarModal('rosa')">Rosa Rosero</a>
+    </ul>
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Información del Participante</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="" class="img-fluid mb-3">
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

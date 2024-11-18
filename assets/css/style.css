@@ -1,0 +1,17 @@
+.cartelera-img {
+    height: 500px;
+    /* Altura fija para todas las imágenes */
+    object-fit: cover;
+    /* Asegura que la imagen cubra el área asignada, recortándola si es necesario */
+    width: 100%;
+    /* Asegura que la imagen cubra todo el ancho del contenedor */
+}
+
+.exhibidos {
+    height: 400px;
+    /* Altura fija para todas las imágenes */
+    object-fit: cover;
+    /* Asegura que la imagen cubra el área asignada, recortándola si es necesario */
+    width: 100%;
+    /* Asegura que la imagen cubra todo el ancho del contenedor */
+}
