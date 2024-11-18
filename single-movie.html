@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    tailwind.config = {
+        darkMode: 'class',
+    }
+</script>
+</head>
+<style>
+    .h-cartelera {
+        height: 520px;
+    }
+</style>
+
+<body class="transition-colors duration-300 bg-white text-black dark:bg-gray-900 dark:text-white">
+    <nav class="bg-gray-900 text-white p-4 flex justify-between">
+        <a href="index.html" class="text-xl font-bold">PE-CARLOS</a>
+        <ul class="flex">
+            <li><a href="index.html" class="px-4">Inicio</a></li>
+            <li><a href="single-movie.html" class="px-4">Valoraciones</a></li>
+        </ul>
+    </nav>
+
+    <button id="darkModeToggle" class="fixed bottom-4 right-4 bg-gray-900 text-white p-3 rounded-full shadow-lg focus:outline-none">
+        🌙
+    </button>
+    
+    <!---SECTION - PELICULA-->
+    <div class="grid grid-cols-12 bg-no-repeat bg-center bg-cover h-96" style="background-image:url(assets/img/lol.jpg)">
+        <div class="col-start-2 col-span-3 rounded shadow">
+            <img src="assets/img/single1.jpg" class="h-cartelera w-full rounded" alt="imagen">
+            <p class="text-lg font-light leading-relaxed mt-3 text-justify">
+                Después de un naufragio, un robot inteligente llamado Roz queda varado en una isla deshabitada. Para sobrevivir en el duro entorno, Roz se une a los animales de la isla y cuida de un ganso bebé huérfano.
+            <div class="mt-3">
+                <strong>Título Original</strong>
+                <p class="font-light leading-relaxed">The Wild Robot</p>
+            </div>
+            <div class="mt-3">
+                <strong>País de Origen</strong>
+                <p class="font-light leading-relaxed">United States of America</p>
+            </div>
+            <div class="mt-3">
+                <strong>Director</strong>
+                <p class="font-light leading-relaxed">Chris Sanders</p>
+            </div>
+            <div class="mt-3">
+                <strong>Actores</strong>
+                <p class="font-light leading-relaxed">Lupita Nyong’o, Pedro Pascal, Catherine O’Hara, Bill Nighy, Kit Connor, Stephanie Hsu, Mark Hamill, Matt Berry, Ving Rhames</p>
+            </div>
+            <div class="mt-3">
+                <strong>Idioma</strong>
+                <p class="font-light leading-relaxed">Inglés</p>
+            </div>
+        </div>
+
+        <div class="col-start-5 col-span-8">
+            <div class="relative">
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/VUCNBAmse04?si=RmnH3Lu02ekKRnkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+    
+            <!-- Sección de valoración -->
+            <div class=" mx-auto mt-4 justify-center">
+                <h2 class="text-lg text-center font-bold mb-2 mt-2">RESEÑA:</h2>
+                <div class="flex items-center justify-center">
+                    <span class="cursor-pointer text-gray-500 text-3xl" onclick="setRating(1)">★</span>
+                    <span class="cursor-pointer text-gray-500 text-3xl" onclick="setRating(2)">★</span>
+                    <span class="cursor-pointer text-gray-500 text-3xl" onclick="setRating(3)">★</span>
+                    <span class="cursor-pointer text-gray-500 text-3xl" onclick="setRating(4)">★</span>
+                    <span class="cursor-pointer text-gray-500 text-3xl" onclick="setRating(5)">★</span>
+                </div>
+                <input type="hidden" id="rating" value="0">
+            </div>
+    
+            <!-- Sección de reseña -->
+            <div class="grid grid-cols-2 gap-4 mt-4 mx-4">
+                <div>
+                  
+                    <form id="reviewForm" class="flex flex-col">
+                        <textarea class="w-full border border-gray-300 rounded p-2" rows="6" placeholder="Escribe tu reseña aquí..."></textarea>
+                        <button type="submit" class="mt-2 bg-blue-500 text-white py-2 px-4 rounded">Enviar Reseña</button>
+                    </form>
+                </div>
+                
+               
+                <div>
+                 
+                    <div class="grid grid-cols-4 gap-1 bg-indigo-100 rounded shadow p-3">
+                        <!-- Primera columna - Día actual -->
+                        <div class="rounded shadow text-center w-24">
+                            <div class="bg-indigo-800 rounded-t p-1">
+                                <p id="fecha" class="text-sm text-white font-semibold"></p> <!-- Día -->
+                            </div>
+                            <!-- Número del mes en blanco -->
+                            <div class="bg-white rounded-b p-2">
+                                <p id="dia-mes" class="text-sm text-indigo-800 font-semibold"></p> <!-- Número del mes -->
+                            </div>
+                        </div>
+                        
+                        <!-- Segunda columna - Día siguiente -->
+                        <div class="rounded shadow text-center w-24"></div>
+                        
+                        <!-- Tercera columna - Día sobre-siguiente -->
+                        <div class="rounded shadow text-center w-24"></div>
+                    </div>
+                    
+                    <script>
+                        var today = new Date();
+                    
+                        // Obtener los valores de la fecha de hoy
+                        var nombreDia = today.toLocaleDateString('es-ES', { weekday: 'long' }).substring(0, 4).toUpperCase();
+                        var nombreMes = today.toLocaleDateString('es-ES', { month: 'long' }).substring(0, 3).toUpperCase();
+                        var numeroDia = today.getDate(); // Día del mes como número
+                    
+                        // Mostrar la fecha de hoy en la primera columna
+                        document.getElementById("fecha").innerText = nombreDia;
+                        document.getElementById("dia-mes").innerText = numeroDia + " " + nombreMes;
+                    
+                        // Crear un array con los nombres de los días de la semana
+                        var diasSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+                    
+                        // Llenar las columnas con los próximos 2 días
+                        for (var i = 1; i < 4; i++) {
+                            // Crear una nueva instancia de la fecha para evitar modificar 'today'
+                            var fecha = new Date();
+                            fecha.setDate(today.getDate() + i);
+                            
+                            var nombreDiaSiguiente = diasSemana[fecha.getDay()].substring(0, 4).toUpperCase();
+                            var numeroDiaSiguiente = fecha.getDate();
+                            var nombreMesSiguiente = fecha.toLocaleDateString('es-ES', { month: 'long' }).substring(0, 3).toUpperCase();
+                            
+                            // Crear un nuevo elemento div para la columna correspondiente
+                            var elemento = document.createElement("div");
+                            elemento.className = "rounded shadow text-center w-24";
+                            elemento.innerHTML = `
+                                <div class="bg-indigo-800 rounded-t p-1">
+                                    <p class="text-sm text-white font-semibold">${nombreDiaSiguiente}</p> <!-- Día -->
+                                </div>
+                                <!-- Número del mes en blanco -->
+                                <div class="bg-white rounded-b p-2">
+                                    <p class="text-sm text-indigo-800 font-semibold">${numeroDiaSiguiente} ${nombreMesSiguiente}</p> <!-- Número del mes -->
+                                </div>
+                            `;
+                            
+                            // Agregar el nuevo elemento a la columna correspondiente
+                            document.querySelectorAll(".grid.grid-cols-4 gap-1.bg-indigo-100.rounded.shadow.p-3")[0].children[i].append(elemento);
+                        }
+                    </script>
+                    
+                    
+                        
+                        
+                       
+                       
+                       
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+
+    //Funcion para alternar el modo oscuro
+
+    const toggle = document.getElementById('darkModeToggle');
+    const html = document.documentElement;
+
+    html.classList.remove('dark');
+    
+
+    // Alternar el modo oscuro al hacer clic en el botón
+    toggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+    });
+
+
+    // Función de valoración
+    function setRating(valoracion) {
+        document.getElementById("rating").value = valoracion;
+        const estrellas = document.querySelectorAll(".flex span");
+        
+        estrellas.forEach((estrella, indice) => {
+            estrella.classList.toggle("text-yellow-500", indice < valoracion);
+            estrella.classList.toggle("text-gray-300", indice >= valoracion);
+        });
+    }
+
+    document.getElementById("reviewForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const textoResena = event.target.querySelector("textarea").value;
+        const valoracionSeleccionada = document.getElementById("rating").value;
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: `Gracias por tu reseña! Valoración: ${valoracionSeleccionada} estrellas\nComentario: ${textoResena}`,
+            showConfirmButton: false,
+            timer: 1500
+          });
+        event.target.reset(); // Reiniciar el formulario
+        setRating(0); // Reiniciar la valoraci n
+    });
+</script>
+</html>
