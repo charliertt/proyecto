@@ -99,6 +99,8 @@
                 form[0].reset(); // Limpiar el formulario
                 const modal = bootstrap.Modal.getInstance(document.getElementById('formModal'));
                 modal.hide(); // Cerrar el modal
+                // Redirigir a index.html
+                window.location.href = 'index.html';
             } else {
                 form.parsley().validate(); // Mostrar mensajes de validación
             }
