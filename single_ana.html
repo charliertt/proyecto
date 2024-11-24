@@ -1,0 +1,503 @@
+<style>
+  .exhibidos{
+    height: 300px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área asignada */
+    width: 100%; /* Asegura que la imagen cubra todo el ancho del contenedor */
+  }
+
+  h2 {
+    color: aliceblue;
+  }
+
+  .custom-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .review {
+    height: 130px;
+  }
+
+  .aclamadas {
+    height: 140px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .carousel-inner .card-img-top {
+    width: auto;
+    height: auto; /* Ajusta este valor según el tamaño deseado */
+    object-fit: cover; /* Asegura que la imagen mantenga proporciones */
+  }
+
+  .carousel-inner .card {
+    height: 100%; /* Asegura que las tarjetas sean del mismo alto */
+  }
+
+  .review-card {
+    background-color: #333;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    color: white;
+  }
+
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+
+  .stat-item i {
+    font-size: 18px;
+  }
+
+  .icon-eye {
+    color: #00ff00;
+  }
+
+  .icon-grid {
+    color: #007bff;
+  }
+
+  .icon-heart {
+    color: #ff6600;
+  }
+</style>
+
+<!---SECTION - BANNER-->
+<div class="container mx-auto">
+
+  <div class="col-8 mx-auto banner mt-2 bg-no-repeat bg-center bg-cover" style="background-image: url('assets/img/'); height: 150px; background-size: cover; background-position: center;">
+  </div>
+
+  <div class="mt-4 mb-4">
+    <h4>Populares:</h4>
+    <hr>
+  </div>
+
+  <div id="carouselExample" class="carousel slide mt-4" data-bs-ride="carousel"> 
+    <div class="carousel-inner">
+      <!-- Primer elemento del carrusel -->
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-3">
+            <div class="card h-100 shadow">
+              <img src="assets/img/gladeador.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+              <div class="d-flex justify-content-center align-items-center stats-container">
+                <div class="stat-item">
+                  <i class="fa fa-eye icon-eye"></i>
+                  <span>200K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-th icon-grid"></i>
+                  <span>44K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-heart icon-heart"></i>
+                  <span>53K</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="card h-100 shadow">
+              <img src="assets/img/sustancia.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+              <div class="d-flex justify-content-center align-items-center stats-container">
+                <div class="stat-item">
+                  <i class="fa fa-eye icon-eye"></i>
+                  <span>27K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-th icon-grid"></i>
+                  <span>18K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-heart icon-heart"></i>
+                  <span>22K</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="card h-100 shadow">
+              <img src="assets/img/gladiador1.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+              <div class="d-flex justify-content-center align-items-center stats-container">
+                <div class="stat-item">
+                  <i class="fa fa-eye icon-eye"></i>
+                  <span>107K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-th icon-grid"></i>
+                  <span>67K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-heart icon-heart"></i>
+                  <span>100K</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="card h-100 shadow">
+              <img src="assets/img/anora.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+              <div class="d-flex justify-content-center align-items-center stats-container">
+                <div class="stat-item">
+                  <i class="fa fa-eye icon-eye"></i>
+                  <span>70K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-th icon-grid"></i>
+                  <span>62K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-heart icon-heart"></i>
+                  <span>69K</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Segundo elemento del carrusel -->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-3">
+            <div class="card h-100 shadow">
+              <img src="assets/img/myheroe.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+              <div class="d-flex justify-content-center align-items-center stats-container">
+                <div class="stat-item">
+                  <i class="fa fa-eye icon-eye"></i>
+                  <span>130K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-th icon-grid"></i>
+                  <span>95K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-heart icon-heart"></i>
+                  <span>127K</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="card h-100 shadow">
+              <img src="assets/img/superman.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+              <div class="d-flex justify-content-center align-items-center stats-container">
+                <div class="stat-item">
+                  <i class="fa fa-eye icon-eye"></i>
+                  <span>74K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-th icon-grid"></i>
+                  <span>53K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-heart icon-heart"></i>
+                  <span>71K</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="card h-100 shadow">
+              <img src="assets/img/smile.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+              <div class="d-flex justify-content-center align-items-center stats-container">
+                <div class="stat-item">
+                  <i class="fa fa-eye icon-eye"></i>
+                  <span>69K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-th icon-grid"></i>
+                  <span>36K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-heart icon-heart"></i>
+                  <span>67K</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="card h-100 shadow">
+              <img src="assets/img/venom.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+              <div class="d-flex justify-content-center align-items-center stats-container">
+                <div class="stat-item">
+                  <i class="fa fa-eye icon-eye"></i>
+                  <span>51K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-th icon-grid"></i>
+                  <span>47K</span>
+                </div>
+                <div class="stat-item">
+                  <i class="fa fa-heart icon-heart"></i>
+                  <span>53K</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<!-- Banner medio -->
+<div class="banner mt-5 bg-no-repeat bg-center bg-cover mb-4" style="background-image: url('assets/img/banner1.jpg'); height: 150px; background-size: cover; background-position: center;">
+</div>
+
+<div class="mt-4 mb-4">
+  
+  <h4>Recien Visto.</h4>
+  <hr>
+
+</div>
+
+<!-- Banner de imagenes -->
+<div class="container-fluid">
+  <div class="row g-0">
+    <div class="col-1">
+      <img src="assets/img/venom.jpg" alt="Imagen 1" class="image-button img-fluid custom-image" onclick="alert('Imagen 1 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/smile.jpg" alt="Imagen 2" class="image-button img-fluid custom-image" onclick="alert('Imagen 2 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/conte.png" alt="Imagen 3" class="image-button img-fluid custom-image" onclick="alert('Imagen 3 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/the.jpg" alt="Imagen 4" class="image-button img-fluid custom-image" onclick="alert('Imagen 4 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/it.jpg" alt="Imagen 5" class="image-button img-fluid custom-image" onclick="alert('Imagen 5 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/myheroe.jpg" alt="Imagen 6" class="image-button img-fluid custom-image" onclick="alert('Imagen 6 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/h.jpg" alt="Imagen 7" class="image-button img-fluid custom-image" onclick="alert('Imagen 7 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/helboy.jpg" alt="Imagen 8" class="image-button img-fluid custom-image" onclick="alert('Imagen 8 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/files.png" alt="Imagen 9" class="image-button img-fluid custom-image" onclick="alert('Imagen 9 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/superman.jpg" alt="Imagen 10" class="image-button img-fluid custom-image" onclick="alert('Imagen 10 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/section4.png" alt="Imagen 10" class="image-button img-fluid custom-image" onclick="alert('Imagen 10 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/section5.jpg" alt="Imagen 10" class="image-button img-fluid custom-image" onclick="alert('Imagen 10 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Columna de Reseñas -->
+      <div class="col-md-8">
+        <h4 class="text-light">Reseñas de Películas</h4>
+        <hr class="text-light">
+        
+        <div class="review-card d-flex mb-3">
+          <div class="review-header d-flex">
+            <img src="assets/img/wildrobot.jpg" alt="Robot Salvaje" class="img-fluid" style="width: 150px; height: auto;">
+            <div class="ms-3">
+              <div class="movie-title text-light">Robot Salvaje <span class="text-light">2024</span></div>
+              <div class="text-light">Por camerosilas <span class="text-warning">★★★★½</span> <span>24 comentarios</span></div>
+              <p class="mt-2 text-light">La historia de un amor salvaje, mezclando romance y caos en un mundo lleno de pasiones desbordadas.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="review-card d-flex mb-3">
+          <div class="review-header d-flex">
+            <img src="assets/img/dragon.jpg" alt="Guardiana de Dragones" class="img-fluid" style="width: 150px; height: auto;">
+            <div class="ms-3">
+              <div class="movie-title text-light">Guardiana de Dragones <span class="text-light">2024</span></div>
+              <div class="text-light">Por Mike Flanagan <span class="text-warning">★★★★☆</span> <span>22 comentarios</span></div>
+              <p class="mt-2 text-light">Una fascinante fantasía donde una valiente mujer defiende a criaturas místicas de fuerzas oscuras.</p>
+            </div>
+          </div>
+        </div>
+      
+
+        <div class="review-card d-flex mb-3">
+          <div class="review-header d-flex">
+            <img src="assets/img/files.png" alt="Las Cuatro Hijas" class="img-fluid" style="width: 150px; height: auto;">
+            <div class="ms-3">
+              <div class="movie-title text-light">Las Cuatro Hijas <span class="text-light">2024</span></div>
+              <div class="text-light">Por Stacey <span class="text-warning">★★★☆☆</span> <span class="text-light">44 comentarios</span></div>
+              <p class="mt-3 text-light">Un drama conmovedor que explora las dinámicas familiares y los profundos lazos entre cuatro hermanas.</p>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+
+      <div class="col-md-4">
+        <h4 class="text-light">Aclamadas</h4>
+        <hr class="text-light">
+        
+        <!-- Películas Aclamadas con flexbox -->
+        <div class="aclamadas d-flex flex-wrap">
+          <!-- Aclamada Gladiator -->
+          <div class="movie mb-4" style="flex: 0 0 48%; height: 200px;">
+            <img src="assets/img/bg.jpg" alt="Gladiator" class="img-fluid" style="height: 100%; width: 100%; object-fit: cover;">
+            <div class="views-count">1,106 vistas</div>
+          </div>
+          <!-- Aclamada Queer -->
+          <div class="movie mb-4" style="flex: 0 0 48%; height: 200px;">
+            <img src="assets/img/helboy.jpg" alt="Queer" class="img-fluid" style="height: 100%; width: 100%; object-fit: cover;">
+            <div class="views-count">1,048 vistas</div>
+          </div>
+          <!-- Aclamada All We Imagine As Light -->
+          <div class="movie mb-4" style="flex: 0 0 48%; height: 200px;">
+            <img src="assets/img/it.jpg" alt="All We Imagine As Light" class="img-fluid" style="height: 100%; width: 100%; object-fit: cover;">
+            <div class="views-count">982 vistas</div>
+          </div>
+          <!-- Aclamada Flow -->
+          <div class="movie mb-4" style="flex: 0 0 48%; height: 200px;">
+            <img src="assets/img/lol.jpg" alt="Flow" class="img-fluid" style="height: 100%; width: 100%; object-fit: cover;">
+            <div class="views-count">889 vistas</div>
+          </div>
+          <div class="movie mb-4" style="flex: 0 0 48%; height: 200px;">
+            <img src="assets/img/betle.jpg" alt="All We Imagine As Light" class="img-fluid" style="height: 100%; width: 100%; object-fit: cover;">
+            <div class="views-count">982 vistas</div>
+          </div>
+          <!-- Aclamada Flow -->
+          <div class="movie mb-4" style="flex: 0 0 48%; height: 200px;">
+            <img src="assets/img/myheroe.jpg" alt="Flow" class="img-fluid" style="height: 100%; width: 100%; object-fit: cover;">
+            <div class="views-count">889 vistas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      
+   <!---CODIGO PARA TARJETAS CARDS-->
+<h2>Noticias Populares</h2>
+<hr style="border: 0; border-top: 2px solid #007bff; width: 100%; margin-left: 0;">
+
+<!-- Contenedor para la cuadrícula estilo Masonry -->
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+  <div class="col">
+    <div class="card shadow-sm h-100">
+      <img src="assets/img/myheroe.jpg" alt="Noticia 1" class="card-img-top" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">My Hero Academia: You're Next (2024)</h5>
+        <p class="card-text">"En una sociedad devastada por los efectos de una guerra total, aparece de repente una misteriosa fortaleza gigante que se traga ciudades..."</p>
+        <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: black; cursor: pointer; display: flex; align-items: flex-start;"> Lee más</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow-sm h-100">
+      <img src="assets/img/section2.jpg" alt="Noticia 2" class="card-img-top" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Le Regne Animal (2024)</h5>
+        <p class="card-text">"En un mundo azotado por una oleada de mutaciones que transforman a los humanos en animales, François hace todo lo posible por salvar a su mujer. Él y su hijo se embarcan en una búsqueda que cambiará sus vidas"</p>
+        <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: black; cursor: pointer; display: flex; align-items: flex-start;"> Lee más</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow-sm h-100">
+      <img src="assets/img/h.jpg" alt="Noticia 3" class="card-img-top" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Kimetsu no Yaiba: arco de los herreros (2024)</h5>
+        <p class="card-text">"En esta temporada, Tanjiro Kamado, junto con su hermana Nezuko, se enfrentan a nuevos y poderosos enemigos en el Pueblo de los Herreros, un lugar crucial para la creación de las espadas utilizadas por los cazadores de demonios."</p>
+        <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: black; cursor: pointer; display: flex; align-items: flex-start;"> Lee más</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow-sm h-100">
+      <img src="assets/img/panda.jpg" alt="Noticia 4" class="card-img-top" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Panda Pop (2024)</h5>
+        <p class="card-text">"Un hermoso relato sobre un panda en busca de su propósito en el mundo."...</p>
+        <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: black; cursor: pointer; display: flex; align-items: flex-start;"> Lee más</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow-sm h-100">
+      <img src="assets/img/pengiun.jpg" alt="Noticia 5" class="card-img-top" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Penguin Parade (2024)</h5>
+        <p class="card-text">"Una mirada a la vida de los pingüinos en su hábitat natural, donde luchan por sobrevivir..."</p>
+        <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: black; cursor: pointer; display: flex; align-items: flex-start;"> Lee más</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow-sm h-100">
+      <img src="assets/img/helboy.jpg" alt="Noticia 6" class="card-img-top" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Hellboy: Reborn (2024)</h5>
+        <p class="card-text">"Finales de la Segunda Guerra Mundial. Por medio de la magia negra, los nazis conjuran al demonio Hellboy, que crece entre los aliados hasta convertirse en adulto, actuando como agente de la oficina de defensa e investigación paranormal."</p>
+        <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: black; cursor: pointer; display: flex; align-items: flex-start;"> Lee más</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow-sm h-100">
+      <img src="assets/img/l/why.jpg" alt="Noticia 6" class="card-img-top" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">I'm Still Here (2024)</h5>
+        <p class="card-text">"El director Cassey Affleck sigue al actor Joaquin Phoenix después anunciar su retirada en 2008 del mundo de la interpretación para reinventarse a sí mismo y dedicarse a la música hip hop."</p>
+        <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: black; cursor: pointer; display: flex; align-items: flex-start;"> Lee más</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow-sm h-100">
+      <img src="assets/img/betle.jpg" alt="Noticia 6" class="card-img-top" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">Beetlejuice (2024)</h5>
+        <p class="card-text">"¡Beetlejuice está de regreso! Después de una tragedia familiar inesperada, tres generaciones de la familia Deetz regresan a su hogar en Winter River. Aún atormentada por Beetlejuice, la vida de Lydia da un vuelco cuando su rebelde hija adolescente, Astrid, descubre el misterioso modelo de la ciudad en el ático y el portal al Más Allá se abre accidentalmente. "</p>
+        <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: black; cursor: pointer; display: flex; align-items: flex-start;"> Lee más</button>
+      </div>
+    </div>
+  </div>
+</div>

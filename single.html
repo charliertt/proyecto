@@ -1,0 +1,425 @@
+<style>
+  .exhibidos{
+    height: 300px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área asignada, recortándola si es necesario */
+    width: 100%; /* Asegura que la imagen cubra todo el ancho del contenedor */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+ /* Ajusta según la altura del navbar */
+}
+
+
+
+h2{
+  color:aliceblue;
+}
+
+.custom-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.review{
+  height: 150px;
+}
+
+.aclamadas {
+  height: 140px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.icon-eye {
+    color: #00ff00;
+  }
+
+  .icon-grid {
+    color: #007bff;
+  }
+
+  .icon-heart {
+    color: #ff6600;
+  }
+
+
+
+
+
+  
+</style>  
+  
+  
+  <!---SECTION - BANNERr-->
+  <div class="container mx-auto">
+
+    <div class="col-8 mx-auto banner mt-2" style="height: 150px; width: 100%; " >
+      <img src="assets/img/mv.jpg" alt="Imagen" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    
+  
+    
+
+    <div class="mt-4 mb-4">
+      <h4>Populares:</h4>
+      <hr>
+  </div>
+
+  
+  <div id="carouselExample" class="carousel slide mt-4" data-bs-ride="carousel"> 
+    <div id="carouselExample" class="carousel slide mt-4" data-bs-ride="carousel"> 
+      <div class="carousel-inner">
+        <!-- Primer elemento del carrusel -->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-3">
+              <div class="card h-100 ">
+                <img src="assets/img/mishima.jpg" class="card-img-top exhibidos h-100" alt="imagen">
+              
+              </div>
+            </div>
+  
+            <div class="col-3">
+              <div class="card h-100 shadow">
+                <img src="assets/img/smile_background.jpg" class="card-img-top exhibidos h-100" alt="imagen">
+                
+              </div>
+            </div>
+  
+            <div class="col-3">
+              <div class="card h-100 shadow">
+                <img src="assets/img/shi.jpg" class="card-img-top exhibidos h-100" alt="imagen">
+                
+              </div>
+            </div>
+  
+            <div class="col-3">
+              <div class="card h-100 shadow">
+                <img src="assets/img/national.jpg" class="card-img-top exhibidos h-100" alt="imagen">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Segundo elemento del carrusel -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-3">
+              <div class="card h-100 shadow">
+                <img src="assets/img/look.jpg" class="card-img-top exhibidos h-100" alt="imagen">
+                
+              </div>
+            </div>
+  
+            <div class="col-3">
+              <div class="card h-100 shadow">
+                <img src="assets/img/flow.jpg" class="card-img-top exhibidos h-100" alt="imagen">
+                
+              </div>
+            </div>
+  
+            <div class="col-3">
+              <div class="card h-100 shadow">
+                <img src="assets/img/heretic.jpg" class="card-img-top exhibidos h-100" alt="imagen">
+               
+              </div>
+            </div>
+  
+            <div class="col-3">
+              <div class="card h-100 shadow">
+                <img src="assets/img/deep.jpeg" class="card-img-top exhibidos h-100" alt="imagen">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+     
+      <button class="carousel-control-prev mx-0" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next mx-0" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      
+    </div>
+  
+    <!-- Controles del carrusel -->
+  
+
+  
+<!-- Banner medio -->
+<div class="banner mt-5 bg-no-repeat bg-center bg-cover mb-4" style="background-image: url('assets/img/banner1.jpg'); height: 150px; background-size: cover; background-position: center;">
+</div>
+
+<div class="mt-4 mb-4">
+  
+  <h4>Recien Visto.</h4>
+  <hr>
+
+</div>
+
+<!-- Banner de imagenes -->
+<div class="container-fluid">
+  <div class="row g-2">
+    <div class="col-1">
+      <img src="assets/img/spiderverse.jpg" alt="Imagen 1" class="img-fluid h-100">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/mist.jpg" alt="Imagen 2" class="img-fluid h-100">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/pointbreak.jpeg" alt="Imagen 3" class="img-fluid h-100">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/images.jpeg" alt="Imagen 4" class="img-fluid h-100">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/it.jpg" alt="Imagen 5" class="img-fluid h-100">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/jeff.jpg" alt="Imagen 6" class="img-fluid h-100">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/h.jpg" alt="Imagen 7" class="img-fluid h-100">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/helboy.jpg" alt="Imagen 8" class="img-fluid h-100">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/spiderman2.jpg" alt="Imagen 9" class="img-fluid h-100">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/hunter.jpg" alt="Imagen 10" class="img-fluid h-100">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/thepengium.jpeg" alt="Imagen 11" class="img-fluid h-100">
+    </div>
+    <div class="col-1">
+      <img src="assets/img/superman.jpg" alt="Imagen 12" class="img-fluid h-100">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="container my-5">
+  <div class="row">
+    <!-- Columna de Reseñas -->
+    <div class="col-md-8 mb-4"> <!-- Aplicamos mb-4 para margen inferior -->
+      <h4>Reseñas Populares de esta Semana</h4>
+      <hr>
+      <div class="row">
+        <!-- Imagen de la película -->
+        <div class="col-2 p-0 d-flex align-items-start">
+          <img src="assets/img/anora.jpg" class="img-fluid review w-75">
+        </div>
+        <!-- Información del revisor -->
+        <div class="col-9 col-md-9">
+          <h4 class="m-0">Anora 2024</h4>
+          <div class="d-flex align-items-center mb-2 mt-2">
+            <img src="assets/img/gabriela.jpg" alt="Reviewer Image" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+            <p class="mb-0 me-2">GabrielaIxc23</p> 
+            
+            <div class="me-2">
+            <i class="fa-solid fa-star text-success"></i>
+            <i class="fa-solid fa-star text-success"></i>
+            <i class="fa-solid fa-star text-success"></i>
+            <i class="fa-solid fa-star text-success"></i>
+            <i class="fa-solid fa-star text-success"></i>
+           
+          </div>
+          <i class="fa-solid fa-heart" style="font-size: 1 rem;"></i>
+          </div>
+          <p class="text-start lh-lg mb-4 fs-6">
+            Una de esas filmes en las que reconozco sus defectos, pero después de 2 verlas, es en todo lo que he estado pensando durante la semana pasada, así que ¿tal vez me encanta? Quién sabe, las valoraciones se inventan de todos modos.
+          </p>
+          <p class="text-star lh-lg mb-4 fs-6">
+            <i class="fa-solid fa-heart" style="font-size: 1.5rem;"></i>  6,125 vistas   
+            </p>
+          
+        </div>
+
+        <hr>
+
+        <div class="col-2 p-0 d-flex align-items-start">
+          <img src="assets/img/alien.jpg" class="img-fluid review w-75">
+        </div>
+        <!-- Información del revisor -->
+        <div class="col-9 col-md-9">
+          <h4 class="m-0">Alien Romolus 2023</h4>
+          <div class="d-flex align-items-center mb-2 mt-2">
+            <img src="assets/img/david.jpg" alt="Reviewer Image" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+            <p class="mb-0 me-2">Davidehrlich</p> 
+            
+            <div class="me-2">
+            <i class="fa-solid fa-star text-success"></i>
+            <i class="fa-solid fa-star text-success"></i>
+            <i class="fa-solid fa-star text-success"></i>
+           
+          </div>
+        
+          </div>
+          <p class="text-start lh-lg mb-4 fs-6">
+          
+            Yo, cuando un personaje lee un periódico más de mil años antes de la invención de la imprenta, justo después de que un gladiador cabalga a lomos de un rinoceronte hacia la batalla: “¿sabes qué? infiernos, sí”
+          </p>
+
+          <p class="text-star lh-lg mb-4 fs-6">
+            <i class="fa-solid fa-heart" style="font-size: 1.5rem;"></i>  830 vistas   
+            </p>
+        </div>
+
+
+
+        
+        <hr>
+
+        <div class="col-2 p-0 d-flex align-items-start">
+          <img src="assets/img/shi.jpg" class="img-fluid review w-75">
+        </div>
+        <!-- Información del revisor -->
+        <div class="col-9 col-md-9">
+          <h4 class="m-0">El viaje de Chihiro 2001</h4>
+          <div class="d-flex align-items-center mb-2 mt-2">
+            <img src="assets/img/danny.jpg" alt="Reviewer Image" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+            <p class="mb-0 me-2">Danny</p> 
+            
+            <div class="me-2">
+            <i class="fa-solid fa-star text-success"></i>
+            <i class="fa-solid fa-star text-success"></i>
+            <i class="fa-solid fa-star text-success"></i>
+            <i class="fa-solid fa-star text-success"></i>
+            <i class="fa-solid fa-star text-success"></i>
+          </div>
+          <i class="fa-solid fa-heart" style="font-size: 1 rem;"></i>
+        
+          </div>
+          <p class="text-start lh-lg mb-4 fs-6">
+          
+            ¿Cómo es que un río literal es uno de los novios más encantadores y cariñosos de toda la historia del cine? Los humanos debemos dar un paso más
+          </p>
+
+          <p class="text-star lh-lg mb-4 fs-6">
+            <i class="fa-solid fa-heart" style="font-size: 1.5rem;"></i>  4,125 vistas   
+            </p>
+        </div>
+        
+      </div>
+    </div><!-- Cierre de col-md-7 -->
+
+    <!-- Columna de Aclamadas -->
+    <div class="col-md-3 offset-md-1"> <!-- Aplicamos offset-md-1 para margen a la izquierda -->
+      <h4>Aclamadas</h4>
+      <hr>
+      <div class="row">
+        <div class="col-12 d-flex flex-row mb-3">
+          <div class="col-4 h-100 px-1">
+            <img src="assets/img/gladeador.jpg" alt="Imagen 1" class="image-button img-fluid aclamadas" onclick="alert('Imagen 1 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+          </div>
+          <div class="col-4 px-1">
+            <img src="assets/img/lower.jpg" alt="Imagen 2" class="image-button img-fluid aclamadas" onclick="alert('Imagen 2 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+          </div>
+          <div class="col-4 px-1">
+            <img src="assets/img/wicked.jpg" alt="Imagen 3" class="image-button img-fluid aclamadas" onclick="alert('Imagen 3 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+          </div>
+        </div>
+        <div class="col-12 d-flex flex-row mb-3">
+          <div class="col-4 h-100 px-1">
+            <img src="assets/img/allwe.jpg" alt="Imagen 1" class="image-button img-fluid aclamadas" onclick="alert('Imagen 1 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+          </div>
+          <div class="col-4 px-1">
+            <img src="assets/img/flow.jpg" alt="Imagen 2" class="image-button img-fluid aclamadas" onclick="alert('Imagen 2 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+          </div>
+          <div class="col-4 px-1">
+            <img src="assets/img/seed.jpg" alt="Imagen 3" class="image-button img-fluid aclamadas" onclick="alert('Imagen 3 clickeada')" onmouseover="this.style.border='3px solid blue'" onmouseout="this.style.border='none'">
+          </div>
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <h5 class="me-auto">Criticos Populares</h5>
+        <a href="registros.html" ><h5 class="ms-auto">Más</h5></a>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-2">
+          <img src="assets/img/james.jpg" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+        </div>
+        <div class="col-md-8 ms-2">
+          <h6>James (Schaffrillas)</h6>
+          <p class="text-start">
+          
+            1,107 filmes, 989 reseñas
+          </p>
+        </div>
+          <hr>
+        <div class="col-md-2">
+          <img src="assets/img/cinemaJoe.jpg" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+        </div>
+
+        <div class="col-md-8 ms-2">
+          <h6>CinemaJoe</h6>
+          <p class="text-start">
+          
+            1,769 filmes, 1,262 reseñas
+          </p>
+        </div>
+          <hr>
+        <div class="col-md-2">
+          <img src="assets/img/karsten.jpg" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+        </div>
+
+        <div class="col-md-8 ms-2">
+          <h6>Karsten</h6>
+          <p class="text-start">
+          
+            1,107 filmes, 989 reseñas
+          </p>
+        </div>
+
+        <hr>
+        <div class="col-md-2">
+          <img src="assets/img/david.jpg" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+        </div>
+
+        <div class="col-md-8 ms-2">
+          <h6>David (Schaffrillas)</h6>
+          <p class="text-start">
+          
+            1,107 filmes, 989 reseñas
+          </p>
+        </div>
+
+      </div>
+      
+      
+    </div><!-- Cierre de col-md-4 -->
+  </div>
+</div>
+
+ <!-- Cierre de .container -->
+
+
+    
+
+
+
+
+      
+      
+
+  
+    <!-- Contenedor para la cuadrícula estilo Masonry -->
+    
+    </div>
+

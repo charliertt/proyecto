@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario en Modal con Bootstrap y Parsley.js</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a Parsley.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/parsleyjs/src/parsley.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h2>Login</h2>
+        <!-- Botón para abrir el modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+            Brrrrrrrrrrrrr
+        </button>
+    </div>
+
+    <!-- El Modal -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="formModalLabel">Formulario de Registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registrationForm" data-parsley-validate>
+                        <!-- Campo Nombre -->
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre"
+                                placeholder="Ejemplo: Juan Pérez" required
+                                data-parsley-required-message="Por favor, ingrese su nombre completo.">
+                            <small class="form-text text-muted">El nombre debe contener al menos 2 palabras.</small>
+                        </div>
+                        <!-- Campo Correo -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Ejemplo: correo@ejemplo.com" required
+                                data-parsley-required-message="Por favor, ingrese un correo electrónico válido."
+                                data-parsley-type="email"
+                                data-parsley-type-message="Ingrese un correo válido como correo@ejemplo.com.">
+                            <small class="form-text text-muted">Debe ser un correo válido.</small>
+                        </div>
+                        <!-- Campo Contraseña -->
+                        <div class="mb-3">
+                            <label for="contraseña" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="contraseña" name="contraseña"
+                                placeholder="Ejemplo: contraseña123" required
+                                data-parsley-required-message="Por favor, ingrese una contraseña."
+                                data-parsley-minlength="6"
+                                data-parsley-minlength-message="La contraseña debe tener al menos 6 caracteres.">
+                            <small class="form-text text-muted">Debe tener al menos 6 caracteres.</small>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="submitBtn">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace a Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Enlace a Parsley.js -->
+    <script src="https://cdn.jsdelivr.net/npm/parsleyjs/dist/parsley.min.js"></script>
+
+    <script>
+        // Manejo del botón de enviar
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            const form = $('#registrationForm');
+
+            // Validar el formulario con Parsley
+            if (form.parsley().isValid()) {
+                // Almacenar los datos en localStorage
+                const nombre = document.getElementById('nombre').value;
+                const email = document.getElementById('email').value;
+                const contraseña = document.getElementById('contraseña').value;
+
+                const usuario = { nombre, email, contraseña };
+                localStorage.setItem('usuario', JSON.stringify(usuario));
+
+                // Imprimir los datos en consola
+                console.log('Datos guardados en localStorage:', usuario);
+
+                // Notificar éxito y cerrar modal
+                alert('Apreciado ' + nombre + ' inicio de secion exitoso.');
+                form[0].reset(); // Limpiar el formulario
+                const modal = bootstrap.Modal.getInstance(document.getElementById('formModal'));
+                modal.hide(); // Cerrar el modal
+            } else {
+                form.parsley().validate(); // Mostrar mensajes de validación
+            }
+        });
+
+        // Inicializar Parsley
+        $(document).ready(function () {
+            $('#registrationForm').parsley();
+        });
+    </script>
+
+</body>
+
+</html>
