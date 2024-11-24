@@ -33,21 +33,4 @@ body {
     /* Asegura que la imagen cubra todo el ancho del contenedor */
 }
 
-.card body {
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Color de fondo semi-transparente */
-} 
-
-/* Cambiar el color de fondo del elemento activo en el navbar */
-.nav-link.active .ms-5 {
-    background-color: black; /* Color de fondo negro para el elemento activo */
-    opacity: 0.9;
-    color: white; /* Cambia el color del texto a blanco para mejor contraste */
-}
-
-.nav-link:hover .ms-5 {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente al pasar el ratón */
-    color: white; /* Cambia el color del texto a blanco al pasar el ratón */
-}
-
     
